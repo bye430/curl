@@ -83,6 +83,7 @@ int test(char *URL)
   test_setopt(curl, CURLOPT_DEBUGDATA, &libtest_debug_config);
   test_setopt(curl, CURLOPT_DEBUGFUNCTION, libtest_debug_cb);
   test_setopt(curl, CURLOPT_VERBOSE, 1L);
+  test_setopt(curl, CURLOPT_MAXREDIRS, -1L);
 
   if(libtest_arg3 && !strcmp(libtest_arg3, "activeftp"))
     test_setopt(curl, CURLOPT_FTPPORT, "-");
